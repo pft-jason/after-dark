@@ -1,0 +1,15 @@
+<footer>
+    <div class="max-w-sm mx-auto text-center pt-8 pb-20 text-neutral-400 text-xs">
+        <p>By continuing, you agree to AfterDark's <a href="" class="text-black hover:underline">Terms of Service</a> and confirm that you have read AfterDark's <a href="" class="text-black hover:underline">Privacy Policy</a>.</p>
+    </div>
+    <div class="text-center p-5 border-t border-neutral-300">
+    {% if request.resolver_match.url_name == 'email_signup' %}
+        <p>Already have an account? <a href="{% url 'email_login' %}" class="text-primary font-medium hover:underline">Log in</a>.</p>
+    {% else %}
+        <p>Don't have an account? <a href="{% url 'email_signup' %}" class="text-primary font-medium hover:underline">Sign up</a>.</p>
+    {% endif %}
+    </div>
+    <div class="bg-black text-neutral-400 h-21 flex items-center justify-end px-36 text-sm">
+        <p>© 2025 AfterDark</p>
+    </div>
+</footer>
